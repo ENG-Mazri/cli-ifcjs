@@ -1,13 +1,13 @@
 import chalk from 'chalk';
-// import execa from 'execa';
 import fs from 'fs';
 //import gitignore from 'gitignore';
-//import Listr from 'listr';
 import ncp from 'ncp';
 import path from 'path';
-//import { projectInstall } from 'pkg-install';
 //import license from 'spdx-license-list/licenses/MIT';
 import { promisify } from 'util';
+import execa from 'execa';
+import Listr from 'listr';
+import { projectInstall } from 'pkg-install';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -18,7 +18,15 @@ async function copyTemplateFiles(options) {
     });
 }
 
-
+async function initGit(options) {
+    const result = await execa('git', ['init'], {
+      cwd: options.targetDirectory,
+    });
+    if (result.failed) {
+      return Promise.reject(new Error('Failed to initialize git'));
+    }
+    return;
+}
 
 export async function createProject(options) {
     options = {
@@ -35,9 +43,28 @@ export async function createProject(options) {
         process.exit(1);
     }
 
-    //console.log('Copy project files');
-    await copyTemplateFiles(options);
-    //console.log(options)
+    const tasks = new Listr([
+        {
+          title: 'Copy project files',
+          task: () => copyTemplateFiles(options),
+        },
+        {
+          title: 'Initialize git',
+          task: () => initGit(options),
+          enabled: () => options.techs.includes('git')
+        },
+        {
+          title: 'Install dependencies',
+          task: () =>
+            projectInstall({
+              cwd: options.targetDirectory,
+            })
+        }
+      ]);
+     
+    await tasks.run();
+
+    // await copyTemplateFiles(options)
     console.log('%s Project created successfully!', chalk.green.bold('DONE'));
     return true;
 }

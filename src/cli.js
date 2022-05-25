@@ -79,7 +79,7 @@ export async function cli(args){
     }else{
         options = await promptFromMissingOptions(options);
         console.log(options)
-        //await createProject(options);
+        await createProject(options);
     }
 
 
