@@ -1,7 +1,7 @@
 {
   "name": "cli-ifcjs",
   "version": "1.0.0",
-  "description": "this is a CLI application for automating ifc web apps creation",
+  "description": "This is a CLI application for automating ifc web apps creation",
   "main": "src/index.js",
   "bin": {
     "cli-ifcjs": "bin/script"
@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "cli"
+    "cli",
+    "ifc.js",
+    "bim"
   ],
   "author": "Mazri A.",
   "license": "MIT",
@@ -26,5 +28,10 @@
     "ncp": "^2.0.0",
     "ora": "^6.1.0",
     "pkg-install": "^1.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ENG-Mazri/cli-ifcjs"
+  },
+  "homepage": "https://github.com/ENG-Mazri/cli-ifcjs#readme"
 }
