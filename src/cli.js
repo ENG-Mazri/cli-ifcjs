@@ -1,7 +1,7 @@
 import arg from 'arg';
 import inquirer from 'inquirer';
 import { createProject } from './utils';
-import { style } from './style';
+import { style, scripts } from './style';
 import { createSpinner } from 'nanospinner'
 
 
@@ -44,14 +44,14 @@ async function promptFromMissingOptions(options){
             type: 'list',
             name: 'template',
             message: ' Please select a project template to use',
-            choices: ['javascript', 'typescript'],
+            choices: ['javascript'],
             default: defaultTemplate 
         })
         questions.push({
             type: 'checkbox',
             name: 'techs',
-            message: ' Please select a technologies to add to your project',
-            choices: ['git', 'webpack', "eslint", "babel"],
+            message: ' Please select technologies to add to your project',
+            choices: ['git'],
             default: defaultTemplate 
         })
 
@@ -74,13 +74,11 @@ export async function cli(args){
     let options = parseArgumentsIntoOptions(args);
     
     if(options.showHelp){
-        console.log('“No one has ever become poor by giving.”― Anne Frank')
-        
+        console.log('Contact us on eng.mazri@gmail.com')       
     }else{
+        console.log('Starting')
         options = await promptFromMissingOptions(options);
-        console.log(options)
         await createProject(options);
+        scripts()
     }
-
-
 }

@@ -1,14 +1,22 @@
 {
-  "name": "javascript",
+  "name": "ifc.js-parcel",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c ./rollup.config.js",
+    "watch": "rollup -w -c ./rollup.config.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies":{
-    "chalk": "^4.1.2"
+  "dependencies": {
+    "three": "^0.141.0",
+    "web-ifc": "0.0.33",
+    "web-ifc-three": "0.0.116"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.75.6"
   }
 }

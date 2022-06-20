@@ -11,3 +11,11 @@ export function style(){
     console.log();
     console.log();
 }
+
+export function scripts(){
+    console.log();
+    console.log('build ' + chalk.blue('npm run build'));
+    console.log('watch ' + chalk.green('npm run watch'));
+    console.log();
+    console.log();
+}
