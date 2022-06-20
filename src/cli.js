@@ -18,7 +18,6 @@ function parseArgumentsIntoOptions(rawArgs){
     {    
         argv: rawArgs.slice(2)
     });
-    console.log(args)
     return {
         skipPrompts: args['--yes'] || false,
         template: args._[0],
