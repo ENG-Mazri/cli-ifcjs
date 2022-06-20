@@ -57,7 +57,6 @@ async function promptFromMissingOptions(options){
 
     }
     const answers = await inquirer.prompt(questions);
-    // console.log(answers)
     return{
         ...options,
         template: options.template || answers.template,
@@ -76,7 +75,6 @@ export async function cli(args){
     if(options.showHelp){
         console.log('Contact us on eng.mazri@gmail.com')       
     }else{
-        console.log('Starting')
         options = await promptFromMissingOptions(options);
         await createProject(options);
         scripts()
