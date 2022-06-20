@@ -16,6 +16,6 @@ or
 - In the command line enter `cli-ifcjs`
 - build the application `npm run build`
 - watch changes `npm run watch`
-- if you're using VS Code, run the Live server to display this web application on your browser. 
+- if you're using VS Code, run the Live server extension to display this web application on your browser. 
 
-### More features will be added soon...
+### More templates and features will be added soon...
