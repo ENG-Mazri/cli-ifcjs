@@ -2,7 +2,7 @@
 ## Description 
 This is a CLI application, that allows creating ready to use templates for **IFC.js** web application.
 
-So far, there is only a javascript template bundled using Rollup, So, it creates the exact same project shown in **IFC.js** Getting started tutorial.
+So far, there is only a javascript template bundled using Rollup, it creates the same project shown in **IFC.js** Getting started tutorial.
 ## Install
 
 `npm i cli-ifcjs`
