@@ -43,7 +43,7 @@ async function promptFromMissingOptions(options){
             type: 'list',
             name: 'template',
             message: ' Please select a project template to use',
-            choices: ['javascript'],
+            choices: ['Javascript + Rollup','Javascript + Webpack' ],
             default: defaultTemplate 
         })
         questions.push({
