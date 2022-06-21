@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c ./rollup.config.js",
-    "watch": "rollup -w -c ./rollup.config.js"
+    "start": "rollup -w -c ./rollup.config.js"
   },
   "keywords": [],
   "author": "",
