@@ -19,3 +19,4 @@ or
 - if you're using VS Code, run the Live server extension to display this web application on your browser. 
 
 ### More templates and features will be added soon...
+
