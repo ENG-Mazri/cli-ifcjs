@@ -1,6 +1,6 @@
 {
   "name": "cli-ifcjs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is a CLI application for automating ifc web apps creation",
   "main": "src/index.js",
   "bin": {
