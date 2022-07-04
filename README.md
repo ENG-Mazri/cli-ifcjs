@@ -2,7 +2,7 @@
 ## Description 
 This is a CLI application, that allows creating ready to use templates for **IFC.js** web application, it creates the same project shown in **IFC.js** Getting started tutorial.
 
-You can watch this in action on youtube [here](https://www.youtube.com/watch?v=ZFogdJz8Rlk)
+You can watch this in action on Youtube [here](https://www.youtube.com/watch?v=ZFogdJz8Rlk)
 
 So far, there are two templates:
 - Javascript + Rollup
