@@ -16,7 +16,7 @@ or
 
 ## Usage
 
-- In the command line enter `cli-ifcjs`
+- In the command line enter `cli-ifcjs` (if you install it globally)
 - build the application `npm run build`
 - watch changes `npm run start`
 - for "Javascript + Rollup" template, if you're using VS Code, run the Live server extension to display this web application on your browser. 
