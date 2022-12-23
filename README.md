@@ -23,5 +23,5 @@ or
 - watch changes `npm run start`
 - for "Javascript + Rollup" template, if you're using VS Code, run the Live server extension to display this web application on your browser. 
 
-### This application will be improved right from 2023, more templates and features will be added...
+### This application will be improved right from 01-2023, more templates and features will be added...
 
