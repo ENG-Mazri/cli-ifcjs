@@ -1,4 +1,5 @@
-# cli-ifcjs
+# cli-ifcjs (not supported)
+
 ## Description 
 This is a CLI application, that allows creating ready to use templates for **IFC.js** web application, it creates the same project shown in **IFC.js** Getting started tutorial.
 
@@ -22,6 +23,3 @@ or
 - build the application `npm run build`
 - watch changes `npm run start`
 - for "Javascript + Rollup" template, if you're using VS Code, run the Live server extension to display this web application on your browser. 
-
-### This application will be improved right from 01-2023, more templates and features will be added...
-
